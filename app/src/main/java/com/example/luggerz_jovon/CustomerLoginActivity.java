@@ -77,7 +77,6 @@ public class CustomerLoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 final String email = mEmail.getText().toString();
                 final String password = mPassword.getText().toString();
-                final boolean isBanned = false;
                 mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(CustomerLoginActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -93,7 +92,9 @@ public class CustomerLoginActivity extends AppCompatActivity {
 
                             current_user_db.setValue(true);
                             Map userInfo = new HashMap();
-                            userInfo.put("isBanned", isBanned);
+                            userInfo.put("isBanned", "false");
+                            userInfo.put("userId", user_id);
+
                             current_user_db.updateChildren(userInfo);
                         }
                     }

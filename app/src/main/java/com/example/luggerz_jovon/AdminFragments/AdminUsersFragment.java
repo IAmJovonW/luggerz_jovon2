@@ -63,7 +63,9 @@ public class AdminUsersFragment extends Fragment {
                     AllUsers l = dataSnapshot1.getValue(AllUsers.class);
                     String userName = l.getName();
                     String userPhone = l.getPhone();
-                    AllUsers fire = new AllUsers(userName, userPhone);
+                    String userId = l.getUserId();
+                    String bannedStatus = l.getBannedStatus();
+                    AllUsers fire = new AllUsers(userName, userPhone, userId, bannedStatus);
                     list.add(l);
                 }
                 adapter = new UsersAdapter(getContext(), list);
@@ -88,7 +90,9 @@ public class AdminUsersFragment extends Fragment {
                     AllUsers l = dataSnapshot1.getValue(AllUsers.class);
                     String userName = l.getName();
                     String userPhone = l.getPhone();
-                    AllUsers fire = new AllUsers(userName, userPhone);
+                    String userId = l.getUserId();
+                    String bannedStatus = l.getBannedStatus();
+                    AllUsers fire = new AllUsers(userName, userPhone, userId, bannedStatus);
                     list.add(l);
                 }
                 adapter = new UsersAdapter(getContext(), list);

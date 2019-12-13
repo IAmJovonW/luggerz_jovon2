@@ -29,6 +29,20 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/list_userId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Some Id" />
+
+        <TextView
+            android:id="@+id/list_userBannedStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Banned Status" />
+
+        <TextView
             android:id="@+id/list_userPhone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
